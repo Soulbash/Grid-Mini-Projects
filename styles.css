@@ -103,7 +103,7 @@ Global Styles
 }
 /* 
 =============
-Hero
+Hero Page
 =============
  */
 .hero-header {
@@ -133,7 +133,7 @@ Hero
 }
 /* 
 =============
-Cards
+Cards Page
 =============
  */
 .title {
@@ -191,4 +191,63 @@ Cards
   /* grid-template-columns: repeat(auto-fill, minmax(368px, 1fr)); */
   /* Four Column Layout */
   grid-template-columns: repeat(auto-fill, minmax(268.5px, 1fr));
+}
+/* 
+=============
+Tiles Page
+=============
+ */
+.tiles {
+  padding: 4rem 0;
+}
+.tiles-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 2rem auto;
+  display: grid;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(305px, 1fr));
+}
+@media screen and (min-width: 1170px) {
+  .tiles-center {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 200px);
+    grid-template-areas:
+      "a a a b"
+      "a a a c"
+      "d d d d"
+      "e f f f"
+      "e g h i";
+  }
+  .tiles img {
+    height: 100%;
+  }
+  .tile-one {
+    grid-area: a;
+  }
+  .tile-two {
+    grid-area: b;
+  }
+  .tile-three {
+    grid-area: c;
+  }
+  .tile-four {
+    grid-area: d;
+  }
+  .tile-five {
+    grid-area: e;
+  }
+  .tile-six {
+    grid-area: f;
+  }
+  .tile-seven {
+    grid-area: g;
+  }
+  .tile-eight {
+    grid-area: h;
+  }
+  .tile-nine {
+    grid-area: i;
+  }
 }
