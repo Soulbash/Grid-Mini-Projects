@@ -177,12 +177,18 @@ Cards
     grid-template-columns: repeat(3, 1fr);
   }
 }   */
-
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
 /* Math for minmax value = max-width - width of combimed gaps of grid / number of columns  */
 /* (1170-64) / 3 = 368 */
 .cards-center {
   display: grid;
   column-gap: 2rem;
+  /* Three Column Laylout */
   /* grid-template-columns: repeat(auto-fill, minmax(368px, 1fr)); */
+  /* Four Column Layout */
   grid-template-columns: repeat(auto-fill, minmax(268.5px, 1fr));
 }
